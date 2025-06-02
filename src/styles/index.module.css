@@ -1,0 +1,113 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.board {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.toolbox {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    pointer-events: auto;
+}
+
+.menu {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+    pointer-events: auto;
+}
+
+.menuItem {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+.menuItem:hover {
+    background-color: #f0f0f0;
+}
+
+.menuItem.active {
+    background-color: #e0e0e0;
+}
+
+.colorPicker {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    pointer-events: auto;
+}
+
+.colorOption {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+    pointer-events: auto;
+}
+
+.colorOption:hover {
+    border-color: #666;
+}
+
+.colorOption.active {
+    border-color: #000;
+}
+
+.sizePicker {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.sizeOption {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    pointer-events: auto;
+}
+
+.sizeOption:hover {
+    opacity: 0.8;
+}
+
+.sizeOption.active {
+    background: #666;
+} 

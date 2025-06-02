@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#__next {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+/* Fix for menu and toolbox hovering */
+.menu, .toolbox {
+  z-index: 100;
+  pointer-events: auto;
+}
+
+/* Ensure proper stacking context */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.board {
+  position: relative;
+  z-index: 0;
+}
